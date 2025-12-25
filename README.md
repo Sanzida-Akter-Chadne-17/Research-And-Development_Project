@@ -3,31 +3,57 @@ Automatic Classification of Carotid Artery Stenosis from Ultrasound Images
 This repository contains the code developed for the Research and Development Project in Computer Engineering with Industry (10 ECTS) at Aarhus University.
 The project investigates the feasibility of deep learning–based classification of carotid artery stenosis using static Doppler ultrasound screenshots under realistic clinical constraints
 
-.
-├── data/
-│   ├── FINAL_DATASET_MODEL_READY.csv
-│   ├── FINAL_DATASET_ORDINAL.csv
-│   ├── ordinal_train.csv
-│   ├── ordinal_val.csv
-│   └── ordinal_test.csv
-│
-├── notebooks/
-│   ├── dicom-to-png.ipynb
-│   ├── part2_extracted_doppler_roi.ipynb
-│   ├── multimodal_model.ipynb
-│   └── ordinal_multimodal_model.ipynb
-│
-├── models/
-│   ├── best_multimodal_model.pth
-│   ├── best_multimodal_focal_regularized.pth
-│   └── best_ordinal_multimodal.pth
-│
-├── figures/
-│   ├── efficientnet_b0_backbone.png
-│   ├── fusion_pipeline.png
-│   └── confusion_matrices/
-│
-├── requirements.txt
-└── README.md
+# Automatic Classification of Carotid Artery Stenosis from Ultrasound Images
+
+This repository contains the code developed for the **Research and Development Project in Computer Engineering with Industry (10 ECTS)** at **Aarhus University**.  
+The project investigates the feasibility of deep learning–based classification of carotid artery stenosis using **static Doppler ultrasound screenshots** under realistic clinical constraints.
+
+---
+
+## 📌 Project Overview
+
+Carotid artery stenosis is a major risk factor for ischemic stroke. In many real-world clinical environments, only static ultrasound screenshots are available instead of raw DICOM data or Doppler video sequences.
+
+This project explores whether deep learning models can learn clinically meaningful stenosis-related patterns from such constrained data. The work is intended as a **proof of concept** and is not a clinically deployable system.
+
+---
+
+## 🏗️ Repository Structure
+
+The following figure illustrates the organization of the repository and the main components of the implementation.
+
+<p align="center">
+  <img src="repo_structure.png" alt="Repository structure overview" width="520">
+</p>
+
+---
+
+## 🧠 Models Implemented
+
+- **Model 1:** Multimodal three-class classification with class-weighted cross-entropy  
+- **Model 2:** Multimodal three-class classification with focal loss and freeze–unfreeze fine-tuning  
+- **Model 3:** Ordinal multimodal learning with two-logit ordinal head enforcing severity ordering  
+
+All models use **EfficientNet-B0** as the image backbone and combine Doppler ROI images with tabular Doppler features.
+
+---
+
+## 🖼️ Data Availability
+
+🚫 **The ultrasound dataset is not publicly available.**
+
+Due to clinical privacy and data protection constraints, the ultrasound images and corresponding annotations cannot be shared. This repository therefore focuses on model architectures, training pipelines, and evaluation methodology.
+
+---
+
+## ⚙️ Requirements
+
+The code is implemented in **Python 3.12** using **PyTorch**.
+
+Install dependencies with:
+
+```bash
+pip install -r requirements.txt
+
 
 
