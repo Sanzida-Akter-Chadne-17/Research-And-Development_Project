@@ -63,6 +63,11 @@ Pillow==10.3.0
 opencv-python==4.9.0.80
 easyocr==1.7.1
 
+<p align="center">
+  <img src="Requirements.png" alt="Requirements" width="600">
+</p>
+
+
 
 ```bash
 pip install -r requirements.txt
