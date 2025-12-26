@@ -50,18 +50,7 @@ Due to clinical privacy and data protection constraints, the ultrasound images a
 
 The code is implemented in **Python 3.12** using **PyTorch**.
 
-Install dependencies with:numpy==1.26.4
-pandas==2.2.2
-matplotlib==3.8.4
-seaborn==0.13.2
-scikit-learn==1.4.2
-scikit-image==0.23.2
-torch==2.2.2
-torchvision==0.17.2
-tqdm==4.66.4
-Pillow==10.3.0
-opencv-python==4.9.0.80
-easyocr==1.7.1
+
 
 <p align="center">
   <img src="Requirements.png" alt="Requirements" width="600">
